@@ -1,0 +1,44 @@
+.create-post {
+    border: 2px solid saddlebrown;
+    width: 80%;
+    aspect-ratio: 1/0.3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sans-photo {
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+
+}
+
+.input-message {
+    width: 70%;
+    aspect-ratio: 1/0.2;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.btn-post {
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icone-picture {
+    border: 1px solid purple;
+    width: 8%;
+    aspect-ratio: 1/0.9;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fa-image {
+    font-size: 4vh;
+    color: burlywood;
+}

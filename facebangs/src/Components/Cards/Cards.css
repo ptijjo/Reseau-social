@@ -1,0 +1,87 @@
+.card {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    overflow: hidden;
+
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px dotted #000;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 6s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.posteur-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.photo-posteur {
+    width: 10%;
+    height: fit-content;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.corps-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.posteur {
+    width: 100%;
+    display: flex;
+}
+
+.posteur-message {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/*.posteur-picture {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    aspect-ratio: 1/0.5;
+}*/
+
+.posteur-img {
+    width: 100%;
+    max-height: fit-content;
+    cursor: pointer;
+}
+
+
+
+.like-commentaire {}

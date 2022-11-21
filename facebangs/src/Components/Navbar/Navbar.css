@@ -1,0 +1,70 @@
+.navbar {
+    width: 100%;
+    background-color: #ffaca3;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+}
+
+.btn-deco {
+    padding: 0 5px;
+    height: 30px;
+    cursor: pointer;
+    background-color: plum;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.btn-deco:hover {
+    background-color: rgb(244, 105, 244);
+}
+
+.user-id {
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo-icone {
+
+    background-color: plum;
+    aspect-ratio: 1/1;
+    width: 2%;
+    cursor: pointer;
+}
+
+.user {
+    cursor: pointer;
+    margin-left: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user:hover {
+    color: white;
+}
+
+.bjr {
+    display: flex;
+    align-items: center;
+}

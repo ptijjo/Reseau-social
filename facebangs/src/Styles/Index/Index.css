@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    min-width: 360px;
+}
+
+body {
+    font-family: Montserrat;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1c1e21;
+    line-height: 1.34;
+    font-size: 12px;
+}
+
+li {
+    list-style-type: none;
+}

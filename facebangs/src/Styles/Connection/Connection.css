@@ -1,0 +1,55 @@
+.Connection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 50%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.log {
+
+    width: 40%;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgb(255, 172, 163);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+    line-height: 1.12;
+
+}
+
+.Sign {
+    width: 25%;
+}
+
+.signli {
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.signli-select {
+    margin-bottom: 30px;
+    cursor: pointer;
+    background-color: #ff6060;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.signli-select:hover {
+    background-color: #ff1f1f;
+}
