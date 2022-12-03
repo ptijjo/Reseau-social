@@ -67,15 +67,6 @@
     margin-top: 20px;
 }
 
-/*.posteur-picture {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    aspect-ratio: 1/0.5;
-}*/
-
 .posteur-img {
     width: 100%;
     max-height: fit-content;
@@ -84,4 +75,11 @@
 
 
 
-.like-commentaire {}
+.like-commentaire {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}

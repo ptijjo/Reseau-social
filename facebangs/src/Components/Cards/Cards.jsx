@@ -9,6 +9,13 @@ const Cards = (props) => {
     const [loading, setLoading] = useState(true);
     const posts = useSelector(state => state.postsReducer);
 
+    const HandleLike = () => {
+        console.log("je like")
+    }
+
+    const HandleComment = () => {
+        console.log("je commente")
+    }
 
     useEffect(() => {
         if (posts !== null) {
@@ -20,7 +27,7 @@ const Cards = (props) => {
     if (loading === true) return (<span className="loader"></span>)
 
     return (
-        <li key={post._id} className="card">
+        <li className="card">
 
             <div className='posteur-photo'>
                 <img src={post.posterAvatar} alt={post.posterAvatar} className="photo-posteur" />
@@ -28,10 +35,10 @@ const Cards = (props) => {
             </div>
 
             <span className='posteur-message'>{post.message}</span>
-            {/*<span className='posteur-picture'>*/}<img src={post.picture} alt={post.picture} className="posteur-img" />{/*</span>*/}
+            <img src={post.picture} alt={post.picture} className="posteur-img" />
             <div className='like-commentaire'>
-                <span> Like ({post.like})</span>
-                <span> Commentaire ({post.nbreCommentaire})</span>
+                <span className='like' onClick={HandleLike}> Like ({post.like})</span>
+                <span className='commentaire' onClick={HandleComment}> Commentaire ({post.nbreCommentaire})</span>
             </div>
 
 

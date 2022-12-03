@@ -28,7 +28,7 @@ const Mur = () => {
             {posts.length > 0 &&
                 <ul className='liste-card'>
                     {posts.slice(0).reverse().map(post => (
-                        <Cards post={post} />
+                        <Cards key={post._id} post={post} />
                     ))}
                 </ul>}
         </div>

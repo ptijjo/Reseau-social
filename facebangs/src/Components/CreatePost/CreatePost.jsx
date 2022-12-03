@@ -9,12 +9,6 @@ const CreatePost = () => {
     const [message, setMessage] = useState("");
     const dispatch = useDispatch();
 
-    /* const data = new FormData();
-     data.append("message", message);
-     data.append("picture", photo);*/
-
-    console.log(photo)
-
     const Handlesubmit = (e) => {
         e.preventDefault();
 
