@@ -26,8 +26,6 @@ const Profil = () => {
         dispatch(getUser())
     }, [dispatch, id.id]);
 
-    console.log(user.Id)
-    console.log(id.id)
 
     if (id.id !== user.Id) { return <Connection /> }
 
@@ -35,8 +33,6 @@ const Profil = () => {
         <div className='profil'>
             <Navbar />
             <UpdateProfil />
-
-
         </div>
     );
 };

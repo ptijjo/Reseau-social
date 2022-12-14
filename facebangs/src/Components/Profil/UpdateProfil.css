@@ -1,4 +1,24 @@
 .body-profil {
-    position: relative;
-    top: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    top: 10%;
+}
+
+.body-profil-avatar {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.profil-avatar {
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }

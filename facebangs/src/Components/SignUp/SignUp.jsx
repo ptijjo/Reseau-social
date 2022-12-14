@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { signup } from '../Endpoints';
+import SignIn from '../SignIn/SignIn';
 
 const SignUp = () => {
     const [nom, setNom] = useState("");
@@ -18,26 +19,33 @@ const SignUp = () => {
     }
 
     // Mot de passe avec 6 caract 1Maj, 1Chiffre et 1caractSpecial
-    const passwordValidator = (i) => {
+    /*const passwordValidator = (i) => {
         return /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{6})$/.test(i);
-    }
+    }*/
 
     const HandleSignUp = (e) => {
         e.preventDefault()
 
         //Controle du formulaire
 
-        if (password.trim().length === 0 || email.trim().length === 0 || nom.trim().length === 0 || prenom.trim().length === 0) {
+        /*if (password.trim().length === 0 || email.trim().length === 0 || nom.trim().length === 0 || prenom.trim().length === 0) {
             return;
-        }
+        }*/
 
         if (!emailValidator(email)) {
             return errorEmail.innerHTML = "Adresse e-mail incorrect";
         }
+        //if (emailValidator(email)) { return errorEmail.innerHTML = ""; }
 
         /* if (!passwordValidator(password)) {
              return errorPassword.innerHTML = "Mot de passe doit contenir au moins 6 caractères dont 1 majuscle, 1 chiffre et un caractère spécial";
          }*/
+
+        if (prenom.length < 3) {
+            return document.getElementById("errorPrenom").innerHTML = "Le prénom doit contenir au moins 3 caractères !"
+        }
+
+
 
 
 
@@ -55,7 +63,6 @@ const SignUp = () => {
             .then(resultat => {
                 setErrorSignup(resultat.data.message);
 
-
             })
             .catch(error => console.log(error))
 
@@ -65,7 +72,11 @@ const SignUp = () => {
         setPassword("");
 
         if (errorSignup !== undefined) { return errorPassword.innerHTML = errorSignup }
+
+        else { return errorPassword.innerHTML = "Inscription réussie ! Vous pouvez vous connecter !" }
     }
+
+
 
 
 
@@ -73,10 +84,14 @@ const SignUp = () => {
         <form action="" onSubmit={HandleSignUp} className="form-Sign">
             <label htmlFor="nom">Nom</label> <br />
             <input type="text" id='nom' className='input' value={nom} onChange={(e) => setNom(e.target.value)} required />
+            <div id='errorNom'></div>
             <br />
+
             <label htmlFor="prenom">Prénom</label> <br />
             <input type="text" id='prenom' className='input' value={prenom} onChange={(e) => setPrenom(e.target.value)} required />
+            <div id='errorPrenom'></div>
             <br />
+
             <label htmlFor="email">E-mail</label> <br />
             <input type="email" id='email' className='input' value={email} onChange={(e) => setEmail(e.target.value)} required />
 

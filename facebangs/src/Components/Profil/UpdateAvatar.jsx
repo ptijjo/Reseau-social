@@ -24,17 +24,13 @@ const UpdateAvatar = () => {
     }
 
     return (
-        <div>
+        <div className='body-profil-avatar'>
             <img src={user.avatar} alt="avatar" className='profil-avatar' />
-
-            <form onSubmit={HandleUpdate}>
-                <label htmlFor="avatar"> Changer d'avatar</label>
+            <form onSubmit={HandleUpdate} className="update-profil-avatar">
+                <label htmlFor="avatar" className='changer-avatar'> Changer d'avatar</label>
                 <input type="file" id='avatar' name='avatar' style={{ display: "none" }} onChange={(e) => setPhoto(e.target.files[0])} />
-
                 <input type="submit" value="Envoyer" />
-
             </form>
-
         </div>
     );
 };
